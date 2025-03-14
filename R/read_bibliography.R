@@ -38,7 +38,7 @@ read_bibliography<- function (filename = NULL, return_df = TRUE,refChars = NULL)
   } else{
     stop("Please provide a valid file path 'filename' or character vector 'refChars' to be converted to a bibliography.")
   }
-  nrows <- min(c(200, length(z)))
+  nrows <- min(c(300, length(z)))
   zsub <- z[seq_len(nrows)]
   tag_type <- "ris"
   z_dframe <- prep_ris(z, detect_delimiter(zsub))

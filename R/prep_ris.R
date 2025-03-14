@@ -82,7 +82,7 @@ detect_delimiter <- function (x)
   else {
     char_list <- strsplit(x, "")
     char_break_test <- unlist(lapply(char_list, function(a) {
-      length(unique(a)) == 1 & length(a > 6)
+      length(unique(a)) == 1 & length(a) > 6
     }))
     if (any(char_break_test)) {
       delimiter <- "character"
